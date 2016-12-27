@@ -3,7 +3,7 @@ from news_scraper.items import NewsScraperItem
 from scrapy.selector import Selector
 
 
-class NewsSpider(scrapy.Spider):
+class ElTiempoSpider(scrapy.Spider):
     name = "eltiemponews"
     allowed_domains = ["eltiempo.com"]
     start_urls = ["http://www.eltiempo.com/archivo/buscar?q=ingeniero&producto=eltiempo&orden=reciente&pagina=%s&a=2016" % page for page in xrange(1,101)]
