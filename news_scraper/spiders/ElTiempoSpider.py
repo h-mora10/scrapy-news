@@ -1,3 +1,4 @@
+# coding=utf-8
 import scrapy
 from news_scraper.items import NewsScraperItem
 from scrapy.selector import Selector
@@ -6,7 +7,7 @@ from scrapy.selector import Selector
 class ElTiempoSpider(scrapy.Spider):
     name = "eltiemponews"
     allowed_domains = ["eltiempo.com"]
-    start_urls = ["http://www.eltiempo.com/archivo/buscar?q=ingeniero&producto=eltiempo&orden=reciente&pagina=%s&a=2016" % page for page in xrange(1,101)]
+    start_urls = ['http://www.eltiempo.com/archivo/buscar?q="ingeniería+de+sistemas"&producto=eltiempo&orden=antigua&pagina=%s&a=2004' % page for page in xrange(1,101)]
 
     def parse(self, response):
         sel = Selector(response)
