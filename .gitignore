@@ -4,3 +4,7 @@ __pycache__/
 */*.pyc
 */*/*.pyc
 *.exe
+*.csv
+*/*.csv
+*/*/*.csv
+*/*/*/*.csv
